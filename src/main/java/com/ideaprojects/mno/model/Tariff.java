@@ -44,41 +44,4 @@ public class Tariff {
                 ", parameters=" + parameters +
                 '}';
     }
-
-    public static class CallPrices {
-        private BigDecimal insideNetwork;
-        private BigDecimal outsideNetwork;
-        private BigDecimal landline;
-        // getters/setters/ toString
-        public BigDecimal getInsideNetwork() { return insideNetwork; }
-        public void setInsideNetwork(BigDecimal insideNetwork) { this.insideNetwork = insideNetwork; }
-        public BigDecimal getOutsideNetwork() { return outsideNetwork; }
-        public void setOutsideNetwork(BigDecimal outsideNetwork) { this.outsideNetwork = outsideNetwork; }
-        public BigDecimal getLandline() { return landline; }
-        public void setLandline(BigDecimal landline) { this.landline = landline; }
-        @Override
-        public String toString() {
-            return "CallPrices{" + insideNetwork + "," + outsideNetwork + "," + landline + '}';
-        }
-    }
-
-    public static class Parameter {
-        private String nameAttr;
-        private Integer favoriteNumberCount;
-        private String tariffization;
-        private BigDecimal activationFee;
-        // getters/setters/toString
-        public String getNameAttr() { return nameAttr; }
-        public void setNameAttr(String nameAttr) { this.nameAttr = nameAttr; }
-        public Integer getFavoriteNumberCount() { return favoriteNumberCount; }
-        public void setFavoriteNumberCount(Integer favoriteNumberCount) { this.favoriteNumberCount = favoriteNumberCount; }
-        public String getTariffization() { return tariffization; }
-        public void setTariffization(String tariffization) { this.tariffization = tariffization; }
-        public BigDecimal getActivationFee() { return activationFee; }
-        public void setActivationFee(BigDecimal activationFee) { this.activationFee = activationFee; }
-        @Override
-        public String toString() {
-            return "Parameter{" + nameAttr + "," + favoriteNumberCount + "," + tariffization + "," + activationFee + '}';
-        }
-    }
 }
