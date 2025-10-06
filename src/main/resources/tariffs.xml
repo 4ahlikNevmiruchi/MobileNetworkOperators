@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tariff xmlns="http://com.ideaprojects.mno"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://com.ideaprojects.mno tariffs.xsd">
+
+    <tariff id="t1">
+        <name>Light</name>
+        <operatorName>MobiUA</operatorName>
+        <payroll>0.00</payroll>
+        <callPrices>
+            <insideNetwork>0.10</insideNetwork>
+            <outsideNetwork>0.50</outsideNetwork>
+            <landline>0.30</landline>
+        </callPrices>
+        <smsPrice>0.50</smsPrice>
+        <parameters>
+            <parameter name="default">
+                <favoriteNumberCount>1</favoriteNumberCount>
+                <tariffization>12-seconds</tariffization>
+                <activationFee>10.00</activationFee>
+            </parameter>
+        </parameters>
+    </tariff>
+
+    <tariff id="t2">
+        <name>ProTalk</name>
+        <operatorName>FastConnect</operatorName>
+        <payroll>99.99</payroll>
+        <callPrices>
+            <insideNetwork>0.05</insideNetwork>
+            <outsideNetwork>0.20</outsideNetwork>
+            <landline>0.15</landline>
+        </callPrices>
+        <smsPrice>0.10</smsPrice>
+        <parameters>
+            <parameter name="business">
+                <favoriteNumberCount>5</favoriteNumberCount>
+                <tariffization>per-minute</tariffization>
+                <activationFee>0.00</activationFee>
+            </parameter>
+            <parameter name="promo">
+                <favoriteNumberCount>0</favoriteNumberCount>
+                <tariffization>per-minute</tariffization>
+                <activationFee>5.00</activationFee>
+            </parameter>
+        </parameters>
+    </tariff>
+
+    <tariff id="t3">
+        <name>Family</name>
+        <operatorName>MobiUA</operatorName>
+        <payroll>49.50</payroll>
+        <callPrices>
+            <insideNetwork>0.00</insideNetwork>
+            <outsideNetwork>0.30</outsideNetwork>
+            <landline>0.25</landline>
+        </callPrices>
+        <smsPrice>0.00</smsPrice>
+        <parameters>
+            <parameter name="familyPack">
+                <favoriteNumberCount>3</favoriteNumberCount>
+                <tariffization>per-minute</tariffization>
+                <activationFee>20.00</activationFee>
+            </parameter>
+        </parameters>
+    </tariff>
+
+</Tariff>
