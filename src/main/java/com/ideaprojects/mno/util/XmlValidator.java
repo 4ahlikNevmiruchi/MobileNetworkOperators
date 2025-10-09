@@ -6,8 +6,12 @@ import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
 import java.io.File;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class XmlValidator {
+
+    private static final Logger LOG = Log.getLogger(XmlValidator.class);
 
     public static boolean validate(String xmlPath, String xsdPath) {
         try {
@@ -15,10 +19,10 @@ public class XmlValidator {
             Schema schema = factory.newSchema(new File(xsdPath));
             Validator validator = schema.newValidator();
             validator.validate(new StreamSource(new File(xmlPath)));
-            System.out.println("XML is valid according to XSD.");
+            LOG.info("XML is valid according to XSD.");
             return true;
         } catch (Exception e) {
-            System.err.println("Validation failed: " + e.getMessage());
+            LOG.log(Level.WARNING, "Validation failed: " + e.getMessage(), e);
             return false;
         }
     }

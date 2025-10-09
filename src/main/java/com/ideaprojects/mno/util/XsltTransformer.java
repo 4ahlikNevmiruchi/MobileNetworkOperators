@@ -5,8 +5,12 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import java.io.File;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class XsltTransformer {
+
+    private static final Logger LOG = Log.getLogger(XsltTransformer.class);
 
     public static void transform(String xmlPath, String xsltPath, String outputPath) {
         try {
@@ -18,11 +22,9 @@ public class XsltTransformer {
             StreamResult result = new StreamResult(new File(outputPath));
 
             transformer.transform(xmlSource, result);
-            System.out.println("XSLT transformation completed successfully.");
-            System.out.println("Output saved to: " + outputPath);
+            LOG.info("XSLT transformation completed successfully. Output saved to: " + outputPath);
         } catch (Exception e) {
-            System.err.println("XSLT transformation failed: " + e.getMessage());
-            e.printStackTrace();
+            LOG.log(Level.SEVERE, "XSLT transformation failed: " + e.getMessage(), e);
         }
     }
 }

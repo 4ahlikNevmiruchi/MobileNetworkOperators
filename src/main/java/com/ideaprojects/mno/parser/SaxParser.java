@@ -9,8 +9,13 @@ import java.io.File;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import com.ideaprojects.mno.util.Log;
 
 public class SaxParser {
+    private static final Logger LOG = Log.getLogger(SaxParser.class);
+
     public static List<Tariff> parse(File xmlFile) throws Exception {
         SAXParserFactory f = SAXParserFactory.newInstance();
         f.setNamespaceAware(true);
@@ -72,7 +77,7 @@ public class SaxParser {
                     default: break;
                 }
             } catch (Exception e){
-                // handle parse errors
+                LOG.log(Level.WARNING, "SAX parsing issue at element '" + el + "' with text '" + text + "': " + e.getMessage(), e);
             }
             sb.setLength(0);
         }
