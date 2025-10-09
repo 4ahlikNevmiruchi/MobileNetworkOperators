@@ -8,6 +8,7 @@ import javax.xml.validation.Validator;
 import java.io.File;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.xml.sax.SAXParseException;
 
 public class XmlValidator {
 
@@ -21,8 +22,23 @@ public class XmlValidator {
             validator.validate(new StreamSource(new File(xmlPath)));
             LOG.info("XML is valid according to XSD.");
             return true;
+        } catch (SAXParseException e) {
+            boolean verbose = Boolean.getBoolean("mno.validator.verbose");
+            String msg = String.format("Validation failed at line %d, column %d: %s", e.getLineNumber(), e.getColumnNumber(), e.getMessage());
+            if (verbose) {
+                LOG.log(Level.WARNING, msg, e);
+            } else {
+                LOG.log(Level.WARNING, msg);
+            }
+            return false;
         } catch (Exception e) {
-            LOG.log(Level.WARNING, "Validation failed: " + e.getMessage(), e);
+            boolean verbose = Boolean.getBoolean("mno.validator.verbose");
+            String msg = "Validation failed: " + e.getMessage();
+            if (verbose) {
+                LOG.log(Level.WARNING, msg, e);
+            } else {
+                LOG.log(Level.WARNING, msg);
+            }
             return false;
         }
     }
