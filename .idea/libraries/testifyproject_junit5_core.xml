@@ -1,0 +1,39 @@
+<component name="libraryTable">
+  <library name="testifyproject.junit5.core" type="repository">
+    <properties maven-id="org.testifyproject.junit5:junit5-core:1.0.6" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/testifyproject/junit5/junit5-core/1.0.6/junit5-core-1.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/testifyproject/core/1.0.6/core-1.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/testifyproject/api/1.0.6/api-1.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/testifyproject/external/external-guava/1.0.6/external-guava-1.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-all/5.2/asm-all-5.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/objenesis/objenesis/2.6/objenesis-2.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy/1.7.6/byte-buddy-1.7.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy-agent/1.7.6/byte-buddy-agent-1.7.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/23.2-jre/guava-23.2-jre.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/errorprone/error_prone_annotations/2.0.18/error_prone_annotations-2.0.18.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/yaml/snakeyaml/1.19/snakeyaml-1.19.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-jexl3/3.1/commons-jexl3-3.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.2/commons-logging-1.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/jodah/failsafe/1.0.4/failsafe-1.0.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/fusesource/jansi/jansi/1.16/jansi-1.16.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/testifyproject/mock/mockito/1.0.6/mockito-1.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.11.0/mockito-core-2.11.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/testifyproject/level/unit/1.0.6/unit-1.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/testifyproject/level/integration/1.0.6/integration-1.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/testifyproject/level/system/1.0.6/system-1.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.2.0/junit-jupiter-engine-5.2.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.2.0/junit-platform-engine-1.2.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.2.0/junit-platform-commons-1.2.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.1.0/opentest4j-1.1.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.2.0/junit-jupiter-api-5.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
