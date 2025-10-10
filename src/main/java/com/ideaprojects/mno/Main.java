@@ -5,6 +5,8 @@ import com.ideaprojects.mno.parser.*;
 import com.ideaprojects.mno.util.*;
 
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.List;
 import java.util.Collections;
 import java.util.logging.Logger;
@@ -44,11 +46,29 @@ public class Main {
 
         System.out.println("\n=== XSLT Transformation ===");
         System.out.println("Transforming XML to grouped structure by operator...");
+        String groupedPath = "src/main/resources/tariffs-grouped.xml";
         XsltTransformer.transform(
                 "src/main/resources/tariffs.xml",
                 "src/main/resources/transform.xslt",
-                "src/main/resources/tariffs-grouped.xml"
+                groupedPath
         );
-        System.out.println("Output written to src/main/resources/tariffs-grouped.xml");
+        System.out.println("Output written to " + groupedPath);
+
+        // Showcase: read and print the generated grouped XML
+        printFileToStdout(groupedPath);
+    }
+
+    /**
+     * Reads the given file and prints its contents to stdout with a simple header/footer.
+     */
+    public static void printFileToStdout(String path) {
+        try {
+            System.out.println("\n=== Contents of " + path + " ===");
+            String content = Files.readString(Path.of(path));
+            System.out.println(content);
+            System.out.println("=== End of " + path + " ===\n");
+        } catch (Exception e) {
+            LOG.warning("Failed to read or print file '" + path + "': " + e.getMessage());
+        }
     }
 }
